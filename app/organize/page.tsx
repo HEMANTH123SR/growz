@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { createDocument } from "@/app/appwrite";
 
 export default function Register() {
   const [title, setTilte] = useState("");
@@ -34,14 +33,14 @@ export default function Register() {
   };
 
   const createEvent = async () => {
-    createDocument({
-      title,
-      description,
-      image: "jsjks",
-      userId: "kksks",
-      catlog: createCatlog(),
-      date: "kkks",
-    });
+    // createDocument({
+    //   title,
+    //   description,
+    //   image: "jsjks",
+    //   userId: "kksks",
+    //   catlog: createCatlog(),
+    //   date: "kkks",
+    // });
   };
 
   return (

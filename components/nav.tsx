@@ -31,12 +31,11 @@ export const Nav = () => {
 
         {/* navigation links */}
         <div className="hidden md:flex justify-center items-center space-x-5 lg:space-x-12 text-white w-3/5">
-          {["Overview", "Market", "Search", "Organize"].map(
+          {["Overview", "Market", "Search", "Organize", "Profile"].map(
             (data: string) => {
               if (
                 data === "Search" ||
-                data === "Organize" ||
-                data == "Dashboard"
+                data === "Organize"
               ) {
                 return (
                   <Link
@@ -52,6 +51,9 @@ export const Nav = () => {
                     </span>
                   </Link>
                 );
+              }
+              if (data == "Profile") {
+                return <a href="https://innocent-moray-15.accounts.dev/user" key={data} className="no-underline font-semibold cursor-pointer">Profile </a>
               }
               return (
                 <span
